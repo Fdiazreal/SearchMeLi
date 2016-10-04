@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
@@ -15,17 +16,21 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SearchMeLi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH4-j8-WYy">
-                    <rect key="frame" x="255" y="289" width="91" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gag-uW-Oqn">
+                    <rect key="frame" x="8" y="8" width="584" height="584"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="vLx-JP-JGd"/>
+                        <outlet property="delegate" destination="-1" id="pmj-7j-4FS"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="kH4-j8-WYy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7OU-Ip-FGe"/>
-                <constraint firstItem="kH4-j8-WYy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="rKT-Ke-mXR"/>
+                <constraint firstItem="Gag-uW-Oqn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="fBL-lh-ChE"/>
+                <constraint firstItem="Gag-uW-Oqn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="orM-xb-9Ci"/>
+                <constraint firstItem="Gag-uW-Oqn" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="tVb-PZ-4jX"/>
+                <constraint firstItem="Gag-uW-Oqn" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="zOa-oy-QmJ"/>
             </constraints>
             <point key="canvasLocation" x="681" y="441"/>
         </view>

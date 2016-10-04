@@ -25,9 +25,6 @@
     self.viewController = [[ViewController alloc] initWithNibName: @"ViewController" bundle: nil];
     self.window.rootViewController = self.viewController;
     
-    // Set the background color to red to understand what is going on
-    self.window.backgroundColor = [UIColor redColor];
-    
     [self.window makeKeyAndVisible];
     
     return YES;
