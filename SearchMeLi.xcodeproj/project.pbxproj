@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35F7EFF01DA437810095F296 /* mycell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EFEF1DA437810095F296 /* mycell.xib */; };
+		35F7EFF41DA43ADD0095F296 /* MLSearchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EFF31DA43ADD0095F296 /* MLSearchListCell.m */; };
+		35F7EFF61DA43B650095F296 /* MLSearchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EFF51DA43B650095F296 /* MLSearchListCell.xib */; };
 		FC8337A11DA34ED400C3EBDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A01DA34ED400C3EBDB /* main.m */; };
 		FC8337A41DA34ED400C3EBDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A31DA34ED400C3EBDB /* AppDelegate.m */; };
 		FC8337AC1DA34ED400C3EBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8337AB1DA34ED400C3EBDB /* Assets.xcassets */; };
 		FC8337BA1DA34ED400C3EBDB /* SearchMeLiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337B91DA34ED400C3EBDB /* SearchMeLiTests.m */; };
 		FC8337C51DA34ED400C3EBDB /* SearchMeLiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337C41DA34ED400C3EBDB /* SearchMeLiUITests.m */; };
-		FC8337D51DA34F9600C3EBDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337D31DA34F9600C3EBDB /* ViewController.m */; };
-		FC8337D61DA34F9600C3EBDB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8337D41DA34F9600C3EBDB /* ViewController.xib */; };
+		FC8337D51DA34F9600C3EBDB /* MLSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337D31DA34F9600C3EBDB /* MLSearchListViewController.m */; };
+		FC8337D61DA34F9600C3EBDB /* MLSearchListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8337D41DA34F9600C3EBDB /* MLSearchListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35F7EFEF1DA437810095F296 /* mycell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mycell.xib; sourceTree = "<group>"; };
+		35F7EFF21DA43ADD0095F296 /* MLSearchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchListCell.h; sourceTree = "<group>"; };
+		35F7EFF31DA43ADD0095F296 /* MLSearchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchListCell.m; sourceTree = "<group>"; };
+		35F7EFF51DA43B650095F296 /* MLSearchListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLSearchListCell.xib; sourceTree = "<group>"; };
 		FC83379C1DA34ED400C3EBDB /* SearchMeLi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMeLi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8337A01DA34ED400C3EBDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC8337A21DA34ED400C3EBDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,9 +53,9 @@
 		FC8337C01DA34ED400C3EBDB /* SearchMeLiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchMeLiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8337C41DA34ED400C3EBDB /* SearchMeLiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchMeLiUITests.m; sourceTree = "<group>"; };
 		FC8337C61DA34ED400C3EBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC8337D21DA34F9600C3EBDB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FC8337D31DA34F9600C3EBDB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FC8337D41DA34F9600C3EBDB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		FC8337D21DA34F9600C3EBDB /* MLSearchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchListViewController.h; sourceTree = "<group>"; };
+		FC8337D31DA34F9600C3EBDB /* MLSearchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchListViewController.m; sourceTree = "<group>"; };
+		FC8337D41DA34F9600C3EBDB /* MLSearchListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLSearchListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +111,13 @@
 				FC8337AB1DA34ED400C3EBDB /* Assets.xcassets */,
 				FC8337B01DA34ED400C3EBDB /* Info.plist */,
 				FC83379F1DA34ED400C3EBDB /* Supporting Files */,
-				FC8337D21DA34F9600C3EBDB /* ViewController.h */,
-				FC8337D31DA34F9600C3EBDB /* ViewController.m */,
-				FC8337D41DA34F9600C3EBDB /* ViewController.xib */,
+				FC8337D21DA34F9600C3EBDB /* MLSearchListViewController.h */,
+				FC8337D31DA34F9600C3EBDB /* MLSearchListViewController.m */,
+				FC8337D41DA34F9600C3EBDB /* MLSearchListViewController.xib */,
+				35F7EFEF1DA437810095F296 /* mycell.xib */,
+				35F7EFF21DA43ADD0095F296 /* MLSearchListCell.h */,
+				35F7EFF31DA43ADD0095F296 /* MLSearchListCell.m */,
+				35F7EFF51DA43B650095F296 /* MLSearchListCell.xib */,
 			);
 			path = SearchMeLi;
 			sourceTree = "<group>";
@@ -240,8 +251,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC8337D61DA34F9600C3EBDB /* ViewController.xib in Resources */,
+				35F7EFF61DA43B650095F296 /* MLSearchListCell.xib in Resources */,
+				FC8337D61DA34F9600C3EBDB /* MLSearchListViewController.xib in Resources */,
 				FC8337AC1DA34ED400C3EBDB /* Assets.xcassets in Resources */,
+				35F7EFF01DA437810095F296 /* mycell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC8337D51DA34F9600C3EBDB /* ViewController.m in Sources */,
+				35F7EFF41DA43ADD0095F296 /* MLSearchListCell.m in Sources */,
+				FC8337D51DA34F9600C3EBDB /* MLSearchListViewController.m in Sources */,
 				FC8337A41DA34ED400C3EBDB /* AppDelegate.m in Sources */,
 				FC8337A11DA34ED400C3EBDB /* main.m in Sources */,
 			);
@@ -475,6 +489,7 @@
 				FC8337CB1DA34ED400C3EBDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC8337CC1DA34ED400C3EBDB /* Build configuration list for PBXNativeTarget "SearchMeLiTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +498,7 @@
 				FC8337CE1DA34ED400C3EBDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC8337CF1DA34ED400C3EBDB /* Build configuration list for PBXNativeTarget "SearchMeLiUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +507,7 @@
 				FC8337D11DA34ED400C3EBDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

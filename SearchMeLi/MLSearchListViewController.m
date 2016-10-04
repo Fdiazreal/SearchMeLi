@@ -6,24 +6,28 @@
 //  Copyright © 2016 Federico Diaz Real. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MLSearchListViewController.h"
 
-@interface ViewController ()
+static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifier"; // MLSearchListViewControllerTableIdentifier
+
+@interface MLSearchListViewController ()
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation ViewController
+@implementation MLSearchListViewController
 {
     NSArray *tableData;
-    NSString *tableIdentifier;
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-    tableData = [NSArray arrayWithObjects:@"Row 1", @"Row 2", @"Row 3", @"Row 4", @"Row 5", @"Row 6", @"Row 7", @"Row 8", @"Row 9", @"Row 10", @"Row 11", @"Row 12", @"Row 13", @"Row 14", @"Row 15", @"Row 16", nil];
+    //[self.tableView registerNib:<#(nullable UINib *)#> forCellReuseIdentifier:<#(nonnull NSString *)#>
     
-    tableIdentifier = @"ATableIdentifier";
+    tableData = [NSArray arrayWithObjects:@"Row 1", @"Row 2", @"Row 3", @"Row 4", @"Row 5", @"Row 6", @"Row 7", @"Row 8", @"Row 9", @"Row 10", @"Row 11", @"Row 12", @"Row 13", @"Row 14", @"Row 15", @"Row 16", @"Row 17", @"Row 18", @"Row 19", @"Row 20", @"Row 21", @"Row 22", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,14 +43,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Try to reuse a cell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tableIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
     
     // If the cell is nil, then we have to create one
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: tableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier: MLSearchViewControllerTableIdentifier];
     }
     
+    // Modify the cell
     cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = @"Holi esto es un detail text label";
     
     return cell;
 }
