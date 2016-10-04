@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC8337A11DA34ED400C3EBDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A01DA34ED400C3EBDB /* main.m */; };
+		FC8337A41DA34ED400C3EBDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A31DA34ED400C3EBDB /* AppDelegate.m */; };
+		FC8337AC1DA34ED400C3EBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8337AB1DA34ED400C3EBDB /* Assets.xcassets */; };
+		FC8337BA1DA34ED400C3EBDB /* SearchMeLiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337B91DA34ED400C3EBDB /* SearchMeLiTests.m */; };
+		FC8337C51DA34ED400C3EBDB /* SearchMeLiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337C41DA34ED400C3EBDB /* SearchMeLiUITests.m */; };
+		FC8337D51DA34F9600C3EBDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337D31DA34F9600C3EBDB /* ViewController.m */; };
+		FC8337D61DA34F9600C3EBDB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8337D41DA34F9600C3EBDB /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC8337B61DA34ED400C3EBDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC8337941DA34ED400C3EBDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC83379B1DA34ED400C3EBDB;
+			remoteInfo = SearchMeLi;
+		};
+		FC8337C11DA34ED400C3EBDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC8337941DA34ED400C3EBDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC83379B1DA34ED400C3EBDB;
+			remoteInfo = SearchMeLi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC83379C1DA34ED400C3EBDB /* SearchMeLi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMeLi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC8337A01DA34ED400C3EBDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC8337A21DA34ED400C3EBDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC8337A31DA34ED400C3EBDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC8337AB1DA34ED400C3EBDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC8337B01DA34ED400C3EBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC8337B51DA34ED400C3EBDB /* SearchMeLiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchMeLiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC8337B91DA34ED400C3EBDB /* SearchMeLiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchMeLiTests.m; sourceTree = "<group>"; };
+		FC8337BB1DA34ED400C3EBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC8337C01DA34ED400C3EBDB /* SearchMeLiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchMeLiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC8337C41DA34ED400C3EBDB /* SearchMeLiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchMeLiUITests.m; sourceTree = "<group>"; };
+		FC8337C61DA34ED400C3EBDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC8337D21DA34F9600C3EBDB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FC8337D31DA34F9600C3EBDB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FC8337D41DA34F9600C3EBDB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC8337991DA34ED400C3EBDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8337B21DA34ED400C3EBDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8337BD1DA34ED400C3EBDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC8337931DA34ED400C3EBDB = {
+			isa = PBXGroup;
+			children = (
+				FC83379E1DA34ED400C3EBDB /* SearchMeLi */,
+				FC8337B81DA34ED400C3EBDB /* SearchMeLiTests */,
+				FC8337C31DA34ED400C3EBDB /* SearchMeLiUITests */,
+				FC83379D1DA34ED400C3EBDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC83379D1DA34ED400C3EBDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC83379C1DA34ED400C3EBDB /* SearchMeLi.app */,
+				FC8337B51DA34ED400C3EBDB /* SearchMeLiTests.xctest */,
+				FC8337C01DA34ED400C3EBDB /* SearchMeLiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC83379E1DA34ED400C3EBDB /* SearchMeLi */ = {
+			isa = PBXGroup;
+			children = (
+				FC8337A21DA34ED400C3EBDB /* AppDelegate.h */,
+				FC8337A31DA34ED400C3EBDB /* AppDelegate.m */,
+				FC8337AB1DA34ED400C3EBDB /* Assets.xcassets */,
+				FC8337B01DA34ED400C3EBDB /* Info.plist */,
+				FC83379F1DA34ED400C3EBDB /* Supporting Files */,
+				FC8337D21DA34F9600C3EBDB /* ViewController.h */,
+				FC8337D31DA34F9600C3EBDB /* ViewController.m */,
+				FC8337D41DA34F9600C3EBDB /* ViewController.xib */,
+			);
+			path = SearchMeLi;
+			sourceTree = "<group>";
+		};
+		FC83379F1DA34ED400C3EBDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC8337A01DA34ED400C3EBDB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC8337B81DA34ED400C3EBDB /* SearchMeLiTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC8337B91DA34ED400C3EBDB /* SearchMeLiTests.m */,
+				FC8337BB1DA34ED400C3EBDB /* Info.plist */,
+			);
+			path = SearchMeLiTests;
+			sourceTree = "<group>";
+		};
+		FC8337C31DA34ED400C3EBDB /* SearchMeLiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC8337C41DA34ED400C3EBDB /* SearchMeLiUITests.m */,
+				FC8337C61DA34ED400C3EBDB /* Info.plist */,
+			);
+			path = SearchMeLiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC83379B1DA34ED400C3EBDB /* SearchMeLi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC8337C91DA34ED400C3EBDB /* Build configuration list for PBXNativeTarget "SearchMeLi" */;
+			buildPhases = (
+				FC8337981DA34ED400C3EBDB /* Sources */,
+				FC8337991DA34ED400C3EBDB /* Frameworks */,
+				FC83379A1DA34ED400C3EBDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchMeLi;
+			productName = SearchMeLi;
+			productReference = FC83379C1DA34ED400C3EBDB /* SearchMeLi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC8337B41DA34ED400C3EBDB /* SearchMeLiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC8337CC1DA34ED400C3EBDB /* Build configuration list for PBXNativeTarget "SearchMeLiTests" */;
+			buildPhases = (
+				FC8337B11DA34ED400C3EBDB /* Sources */,
+				FC8337B21DA34ED400C3EBDB /* Frameworks */,
+				FC8337B31DA34ED400C3EBDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC8337B71DA34ED400C3EBDB /* PBXTargetDependency */,
+			);
+			name = SearchMeLiTests;
+			productName = SearchMeLiTests;
+			productReference = FC8337B51DA34ED400C3EBDB /* SearchMeLiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC8337BF1DA34ED400C3EBDB /* SearchMeLiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC8337CF1DA34ED400C3EBDB /* Build configuration list for PBXNativeTarget "SearchMeLiUITests" */;
+			buildPhases = (
+				FC8337BC1DA34ED400C3EBDB /* Sources */,
+				FC8337BD1DA34ED400C3EBDB /* Frameworks */,
+				FC8337BE1DA34ED400C3EBDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC8337C21DA34ED400C3EBDB /* PBXTargetDependency */,
+			);
+			name = SearchMeLiUITests;
+			productName = SearchMeLiUITests;
+			productReference = FC8337C01DA34ED400C3EBDB /* SearchMeLiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC8337941DA34ED400C3EBDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Federico Diaz Real";
+				TargetAttributes = {
+					FC83379B1DA34ED400C3EBDB = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FC8337B41DA34ED400C3EBDB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FC83379B1DA34ED400C3EBDB;
+					};
+					FC8337BF1DA34ED400C3EBDB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FC83379B1DA34ED400C3EBDB;
+					};
+				};
+			};
+			buildConfigurationList = FC8337971DA34ED400C3EBDB /* Build configuration list for PBXProject "SearchMeLi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC8337931DA34ED400C3EBDB;
+			productRefGroup = FC83379D1DA34ED400C3EBDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC83379B1DA34ED400C3EBDB /* SearchMeLi */,
+				FC8337B41DA34ED400C3EBDB /* SearchMeLiTests */,
+				FC8337BF1DA34ED400C3EBDB /* SearchMeLiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC83379A1DA34ED400C3EBDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8337D61DA34F9600C3EBDB /* ViewController.xib in Resources */,
+				FC8337AC1DA34ED400C3EBDB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8337B31DA34ED400C3EBDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8337BE1DA34ED400C3EBDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC8337981DA34ED400C3EBDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8337D51DA34F9600C3EBDB /* ViewController.m in Sources */,
+				FC8337A41DA34ED400C3EBDB /* AppDelegate.m in Sources */,
+				FC8337A11DA34ED400C3EBDB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8337B11DA34ED400C3EBDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8337BA1DA34ED400C3EBDB /* SearchMeLiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8337BC1DA34ED400C3EBDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC8337C51DA34ED400C3EBDB /* SearchMeLiUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC8337B71DA34ED400C3EBDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC83379B1DA34ED400C3EBDB /* SearchMeLi */;
+			targetProxy = FC8337B61DA34ED400C3EBDB /* PBXContainerItemProxy */;
+		};
+		FC8337C21DA34ED400C3EBDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC83379B1DA34ED400C3EBDB /* SearchMeLi */;
+			targetProxy = FC8337C11DA34ED400C3EBDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FC8337C71DA34ED400C3EBDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC8337C81DA34ED400C3EBDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC8337CA1DA34ED400C3EBDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SearchMeLi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fdiazreal.ios.SearchMeLi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC8337CB1DA34ED400C3EBDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SearchMeLi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fdiazreal.ios.SearchMeLi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FC8337CD1DA34ED400C3EBDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SearchMeLiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fdiazreal.ios.SearchMeLiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SearchMeLi.app/SearchMeLi";
+			};
+			name = Debug;
+		};
+		FC8337CE1DA34ED400C3EBDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SearchMeLiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fdiazreal.ios.SearchMeLiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SearchMeLi.app/SearchMeLi";
+			};
+			name = Release;
+		};
+		FC8337D01DA34ED400C3EBDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SearchMeLiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fdiazreal.ios.SearchMeLiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SearchMeLi;
+			};
+			name = Debug;
+		};
+		FC8337D11DA34ED400C3EBDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SearchMeLiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fdiazreal.ios.SearchMeLiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SearchMeLi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC8337971DA34ED400C3EBDB /* Build configuration list for PBXProject "SearchMeLi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC8337C71DA34ED400C3EBDB /* Debug */,
+				FC8337C81DA34ED400C3EBDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC8337C91DA34ED400C3EBDB /* Build configuration list for PBXNativeTarget "SearchMeLi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC8337CA1DA34ED400C3EBDB /* Debug */,
+				FC8337CB1DA34ED400C3EBDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC8337CC1DA34ED400C3EBDB /* Build configuration list for PBXNativeTarget "SearchMeLiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC8337CD1DA34ED400C3EBDB /* Debug */,
+				FC8337CE1DA34ED400C3EBDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC8337CF1DA34ED400C3EBDB /* Build configuration list for PBXNativeTarget "SearchMeLiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC8337D01DA34ED400C3EBDB /* Debug */,
+				FC8337D11DA34ED400C3EBDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC8337941DA34ED400C3EBDB /* Project object */;
+}
