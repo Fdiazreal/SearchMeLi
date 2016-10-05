@@ -10,4 +10,10 @@
 
 @interface MLSearchListCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UIImageView *cellImage;
+@property (nonatomic, weak) IBOutlet UILabel *priceLabel;
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+
+// TODO Nunca exponer detalles de implementacion hacia afuera.
+
 @end

@@ -10,6 +10,7 @@
 		35F7EFF01DA437810095F296 /* mycell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EFEF1DA437810095F296 /* mycell.xib */; };
 		35F7EFF41DA43ADD0095F296 /* MLSearchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EFF31DA43ADD0095F296 /* MLSearchListCell.m */; };
 		35F7EFF61DA43B650095F296 /* MLSearchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EFF51DA43B650095F296 /* MLSearchListCell.xib */; };
+		FAEC94BFBD34E70A045ED1A8 /* libPods-SearchMeLi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F084714651F0D305DB66E92 /* libPods-SearchMeLi.a */; };
 		FC8337A11DA34ED400C3EBDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A01DA34ED400C3EBDB /* main.m */; };
 		FC8337A41DA34ED400C3EBDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A31DA34ED400C3EBDB /* AppDelegate.m */; };
 		FC8337AC1DA34ED400C3EBDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8337AB1DA34ED400C3EBDB /* Assets.xcassets */; };
@@ -41,6 +42,9 @@
 		35F7EFF21DA43ADD0095F296 /* MLSearchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchListCell.h; sourceTree = "<group>"; };
 		35F7EFF31DA43ADD0095F296 /* MLSearchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchListCell.m; sourceTree = "<group>"; };
 		35F7EFF51DA43B650095F296 /* MLSearchListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLSearchListCell.xib; sourceTree = "<group>"; };
+		8F084714651F0D305DB66E92 /* libPods-SearchMeLi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SearchMeLi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C16284D952D746907C6DF36 /* Pods-SearchMeLi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMeLi.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchMeLi/Pods-SearchMeLi.release.xcconfig"; sourceTree = "<group>"; };
+		E3BB205A68140083EFD08163 /* Pods-SearchMeLi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMeLi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchMeLi/Pods-SearchMeLi.debug.xcconfig"; sourceTree = "<group>"; };
 		FC83379C1DA34ED400C3EBDB /* SearchMeLi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMeLi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8337A01DA34ED400C3EBDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC8337A21DA34ED400C3EBDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEC94BFBD34E70A045ED1A8 /* libPods-SearchMeLi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD9788146C12A6CD52AA6E82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F084714651F0D305DB66E92 /* libPods-SearchMeLi.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC8337931DA34ED400C3EBDB = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +103,8 @@
 				FC8337B81DA34ED400C3EBDB /* SearchMeLiTests */,
 				FC8337C31DA34ED400C3EBDB /* SearchMeLiUITests */,
 				FC83379D1DA34ED400C3EBDB /* Products */,
+				FFBB9A2381E0BA40E62EC7E9 /* Pods */,
+				BD9788146C12A6CD52AA6E82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +163,15 @@
 			path = SearchMeLiUITests;
 			sourceTree = "<group>";
 		};
+		FFBB9A2381E0BA40E62EC7E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3BB205A68140083EFD08163 /* Pods-SearchMeLi.debug.xcconfig */,
+				9C16284D952D746907C6DF36 /* Pods-SearchMeLi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC8337C91DA34ED400C3EBDB /* Build configuration list for PBXNativeTarget "SearchMeLi" */;
 			buildPhases = (
+				B7D1DD91159D40368579DB7E /* [CP] Check Pods Manifest.lock */,
 				FC8337981DA34ED400C3EBDB /* Sources */,
 				FC8337991DA34ED400C3EBDB /* Frameworks */,
 				FC83379A1DA34ED400C3EBDB /* Resources */,
+				C93E7D3A40B3AF119B4886B6 /* [CP] Embed Pods Frameworks */,
+				5DE2775230F2245F4AFA334C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +300,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DE2775230F2245F4AFA334C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchMeLi/Pods-SearchMeLi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7D1DD91159D40368579DB7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C93E7D3A40B3AF119B4886B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SearchMeLi/Pods-SearchMeLi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC8337981DA34ED400C3EBDB /* Sources */ = {
@@ -404,6 +479,7 @@
 		};
 		FC8337CA1DA34ED400C3EBDB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3BB205A68140083EFD08163 /* Pods-SearchMeLi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SearchMeLi/Info.plist;
@@ -415,6 +491,7 @@
 		};
 		FC8337CB1DA34ED400C3EBDB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C16284D952D746907C6DF36 /* Pods-SearchMeLi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SearchMeLi/Info.plist;

@@ -5,67 +5,64 @@
 //  Created by Federico Diaz Real on 10/3/16.
 //  Copyright © 2016 Federico Diaz Real. All rights reserved.
 //
-
+#import "UIImageView+AFNetworking.h"
 #import "MLSearchListViewController.h"
+#import "MLSearchListCell.h"
 
-static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifier"; // MLSearchListViewControllerTableIdentifier
+static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifier";
 
 @interface MLSearchListViewController ()
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *tableData;
+@property (nonatomic, strong) NSArray *priceData;
 
 @end
 
 @implementation MLSearchListViewController
-{
-    NSArray *tableData;
-}
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
-    //[self.tableView registerNib:<#(nullable UINib *)#> forCellReuseIdentifier:<#(nonnull NSString *)#>
-    // Test
+    UINib *pMLSearchListCellNib = [UINib nibWithNibName:NSStringFromClass([MLSearchListCell class]) bundle:nil];
+    [self.tableView registerNib:pMLSearchListCellNib forCellReuseIdentifier:MLSearchViewControllerTableIdentifier];
     
-    tableData = [NSArray arrayWithObjects:@"Row 1", @"Row 2", @"Row 3", @"Row 4", @"Row 5", @"Row 6", @"Row 7", @"Row 8", @"Row 9", @"Row 10", @"Row 11", @"Row 12", @"Row 13", @"Row 14", @"Row 15", @"Row 16", @"Row 17", @"Row 18", @"Row 19", @"Row 20", @"Row 21", @"Row 22", nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.tableData = @[@"Row 1", @"Row 2", @"Row 3", @"Row 4", @"Row 5", @"Row 6", @"Row 7", @"Row 8", @"Row 9", @"Row 10", @"Row 11", @"Row 12", @"Row 13", @"Row 14", @"Row 15", @"Row 16", @"Row 17", @"Row 18", @"Row 19", @"Row 20", @"Row 21", @"Row 22"];
+    
+    self.priceData = @[@100, @200, @300, @400, @500, @600, @700, @800, @900, @1000, @1100, @1200, @1300, @1400, @1500, @1600, @1700, @1800, @1900, @2000, @2100, @2200];
 }
 
 #pragma mark - UITableViewDatasource protocol
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [tableData count];
+    return [self.tableData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Try to reuse a cell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
-    
-    // If the cell is nil, then we have to create one
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier: MLSearchViewControllerTableIdentifier];
-    }
+    MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
     
     // Modify the cell
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = @"Holi esto es un detail text label";
+    cell.priceLabel.text = [[self.priceData objectAtIndex:indexPath.row] stringValue];
+    cell.titleLabel.text = [self.tableData objectAtIndex:indexPath.row];
     
+    [cell.imageView setImageWithURL: [NSURL URLWithString:@"https://dummyimage.com/150x150/EEEEEE/0011ff.jpg&text=IMG+1"]];
+    
+    UIImageView *newImageView = [[UIImageView alloc] init];
+    [newImageView setImageWithURL: [NSURL URLWithString:@""]];
+    
+    cell.cellImage = newImageView;
+     
     return cell;
 }
 
-/*
-#pragma mark - Navigation
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // TODO: METODO COSTOSO!!! CACHEAR!
+    return [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
 }
-*/
 
 @end
