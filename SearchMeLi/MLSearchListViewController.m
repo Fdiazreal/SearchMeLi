@@ -41,18 +41,20 @@ static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifie
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Try to reuse a cell
-    MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
+    __weak MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
     
     // Modify the cell
     cell.priceLabel.text = [[self.priceData objectAtIndex:indexPath.row] stringValue];
     cell.titleLabel.text = [self.tableData objectAtIndex:indexPath.row];
     
-    [cell.imageView setImageWithURL: [NSURL URLWithString:@"https://dummyimage.com/150x150/EEEEEE/0011ff.jpg&text=IMG+1"]];
-    
-    UIImageView *newImageView = [[UIImageView alloc] init];
-    [newImageView setImageWithURL: [NSURL URLWithString:@""]];
-    
-    cell.cellImage = newImageView;
+    [cell.imageView setImageWithURLRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://dummyimage.com/150x150/EEEEEE/0011ff.jpg&text=IMG+1"]]
+                    placeholderImage:[UIImage imageNamed:@"adidas-search" ]
+                    success: ^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+                        cell.cellImage.image = image;
+                        [cell setNeedsLayout];
+                    } failure: ^(NSURLRequest *request, NSHTTPURLResponse * __nullable response, NSError *error){
+                        NSLog(@"Error fetching the image: %@", [error localizedDescription]);
+                    }];
      
     return cell;
 }
@@ -61,7 +63,7 @@ static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifie
 {
     MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
 
-    // TODO: METODO COSTOSO!!! CACHEAR!
+    // TODO: should cache this, it is an expensive operation
     return [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
 }
 
