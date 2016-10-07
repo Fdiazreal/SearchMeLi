@@ -22,9 +22,13 @@
     // Create a window with the frame that has the same size as the screen
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.viewController = [[MLSearchListViewController alloc] init]; // Better way to instantiate 
-    self.window.rootViewController = self.viewController;
+    MLSearchListViewController *rootViewController = [[MLSearchListViewController alloc] init]; // Better way to instantiate
     
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    self.viewController = rootViewController;
+    
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     
     return YES;

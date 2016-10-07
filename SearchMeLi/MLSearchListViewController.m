@@ -8,6 +8,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "MLSearchListViewController.h"
 #import "MLSearchListCell.h"
+#import "MLVipViewController.h"
 
 static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifier";
 
@@ -16,10 +17,17 @@ static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifie
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *tableData;
 @property (nonatomic, strong) NSArray *priceData;
+@property (nonatomic, strong) NSIndexPath *selectedRow;
 
 @end
 
 @implementation MLSearchListViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath: self.selectedRow animated: YES];
+}
 
 - (void)viewDidLoad {
     
@@ -41,21 +49,18 @@ static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifie
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Try to reuse a cell
-    __weak MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
+    MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
     
     // Modify the cell
     cell.priceLabel.text = [[self.priceData objectAtIndex:indexPath.row] stringValue];
     cell.titleLabel.text = [self.tableData objectAtIndex:indexPath.row];
     
-    [cell.imageView setImageWithURLRequest: [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://dummyimage.com/150x150/EEEEEE/0011ff.jpg&text=IMG+1"]]
-                    placeholderImage:[UIImage imageNamed:@"adidas-search" ]
-                    success: ^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
-                        cell.cellImage.image = image;
-                        [cell setNeedsLayout];
-                    } failure: ^(NSURLRequest *request, NSHTTPURLResponse * __nullable response, NSError *error){
-                        NSLog(@"Error fetching the image: %@", [error localizedDescription]);
-                    }];
-     
+    UIImageView *imageView = cell.imageView;
+    
+    NSString *imageUrl = [NSString stringWithFormat: @"%@%d", @"https://dummyimage.com/200x200/eeeeee/ff0000.png&text=Image+", indexPath.row + 1];
+    
+    [imageView setImageWithURL: [NSURL URLWithString: imageUrl]];
+    
     return cell;
 }
 
@@ -65,6 +70,12 @@ static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifie
 
     // TODO: should cache this, it is an expensive operation
     return [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedRow = indexPath;
+    
+    [self.navigationController pushViewController: [[MLVipViewController alloc] init] animated:YES];
 }
 
 @end

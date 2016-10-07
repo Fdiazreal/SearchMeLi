@@ -2,7 +2,7 @@
 //  MLSearchListCell.h
 //  SearchMeLi
 //
-//  Created by Federico Diaz Real on 10/4/16.
+//  Created by Federico Diaz Real on 10/7/16.
 //  Copyright © 2016 Federico Diaz Real. All rights reserved.
 //
 
@@ -13,7 +13,5 @@
 @property (nonatomic, weak) IBOutlet UIImageView *cellImage;
 @property (nonatomic, weak) IBOutlet UILabel *priceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
-
-// TODO Nunca exponer detalles de implementacion hacia afuera.
 
 @end

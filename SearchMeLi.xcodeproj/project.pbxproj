@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35F7EFF01DA437810095F296 /* mycell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EFEF1DA437810095F296 /* mycell.xib */; };
-		35F7EFF41DA43ADD0095F296 /* MLSearchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EFF31DA43ADD0095F296 /* MLSearchListCell.m */; };
-		35F7EFF61DA43B650095F296 /* MLSearchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EFF51DA43B650095F296 /* MLSearchListCell.xib */; };
+		35F7EFFA1DA819500095F296 /* MLVipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F7EFF81DA819500095F296 /* MLVipViewController.m */; };
+		35F7EFFB1DA819500095F296 /* MLVipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EFF91DA819500095F296 /* MLVipViewController.xib */; };
+		35F7F0041DA82BDE0095F296 /* MLSearchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F7F0021DA82BDE0095F296 /* MLSearchListCell.m */; };
+		35F7F0051DA82BDE0095F296 /* MLSearchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7F0031DA82BDE0095F296 /* MLSearchListCell.xib */; };
 		FAEC94BFBD34E70A045ED1A8 /* libPods-SearchMeLi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F084714651F0D305DB66E92 /* libPods-SearchMeLi.a */; };
 		FC8337A11DA34ED400C3EBDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A01DA34ED400C3EBDB /* main.m */; };
 		FC8337A41DA34ED400C3EBDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A31DA34ED400C3EBDB /* AppDelegate.m */; };
@@ -38,10 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		35F7EFEF1DA437810095F296 /* mycell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mycell.xib; sourceTree = "<group>"; };
-		35F7EFF21DA43ADD0095F296 /* MLSearchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchListCell.h; sourceTree = "<group>"; };
-		35F7EFF31DA43ADD0095F296 /* MLSearchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchListCell.m; sourceTree = "<group>"; };
-		35F7EFF51DA43B650095F296 /* MLSearchListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLSearchListCell.xib; sourceTree = "<group>"; };
+		35F7EFF71DA819500095F296 /* MLVipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLVipViewController.h; sourceTree = "<group>"; };
+		35F7EFF81DA819500095F296 /* MLVipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLVipViewController.m; sourceTree = "<group>"; };
+		35F7EFF91DA819500095F296 /* MLVipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLVipViewController.xib; sourceTree = "<group>"; };
+		35F7F0011DA82BDE0095F296 /* MLSearchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchListCell.h; sourceTree = "<group>"; };
+		35F7F0021DA82BDE0095F296 /* MLSearchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchListCell.m; sourceTree = "<group>"; };
+		35F7F0031DA82BDE0095F296 /* MLSearchListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLSearchListCell.xib; sourceTree = "<group>"; };
 		8F084714651F0D305DB66E92 /* libPods-SearchMeLi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SearchMeLi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C16284D952D746907C6DF36 /* Pods-SearchMeLi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMeLi.release.xcconfig"; path = "Pods/Target Support Files/Pods-SearchMeLi/Pods-SearchMeLi.release.xcconfig"; sourceTree = "<group>"; };
 		E3BB205A68140083EFD08163 /* Pods-SearchMeLi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMeLi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SearchMeLi/Pods-SearchMeLi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,10 +132,12 @@
 				FC8337D21DA34F9600C3EBDB /* MLSearchListViewController.h */,
 				FC8337D31DA34F9600C3EBDB /* MLSearchListViewController.m */,
 				FC8337D41DA34F9600C3EBDB /* MLSearchListViewController.xib */,
-				35F7EFEF1DA437810095F296 /* mycell.xib */,
-				35F7EFF21DA43ADD0095F296 /* MLSearchListCell.h */,
-				35F7EFF31DA43ADD0095F296 /* MLSearchListCell.m */,
-				35F7EFF51DA43B650095F296 /* MLSearchListCell.xib */,
+				35F7EFF71DA819500095F296 /* MLVipViewController.h */,
+				35F7EFF81DA819500095F296 /* MLVipViewController.m */,
+				35F7EFF91DA819500095F296 /* MLVipViewController.xib */,
+				35F7F0011DA82BDE0095F296 /* MLSearchListCell.h */,
+				35F7F0021DA82BDE0095F296 /* MLSearchListCell.m */,
+				35F7F0031DA82BDE0095F296 /* MLSearchListCell.xib */,
 			);
 			path = SearchMeLi;
 			sourceTree = "<group>";
@@ -278,10 +283,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F7EFF61DA43B650095F296 /* MLSearchListCell.xib in Resources */,
+				35F7F0051DA82BDE0095F296 /* MLSearchListCell.xib in Resources */,
+				35F7EFFB1DA819500095F296 /* MLVipViewController.xib in Resources */,
 				FC8337D61DA34F9600C3EBDB /* MLSearchListViewController.xib in Resources */,
 				FC8337AC1DA34ED400C3EBDB /* Assets.xcassets in Resources */,
-				35F7EFF01DA437810095F296 /* mycell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +334,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C93E7D3A40B3AF119B4886B6 /* [CP] Embed Pods Frameworks */ = {
@@ -354,9 +359,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F7EFF41DA43ADD0095F296 /* MLSearchListCell.m in Sources */,
 				FC8337D51DA34F9600C3EBDB /* MLSearchListViewController.m in Sources */,
 				FC8337A41DA34ED400C3EBDB /* AppDelegate.m in Sources */,
+				35F7EFFA1DA819500095F296 /* MLVipViewController.m in Sources */,
+				35F7F0041DA82BDE0095F296 /* MLSearchListCell.m in Sources */,
 				FC8337A11DA34ED400C3EBDB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
