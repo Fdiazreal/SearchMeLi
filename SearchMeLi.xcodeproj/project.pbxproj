@@ -11,6 +11,7 @@
 		35F7EFFB1DA819500095F296 /* MLVipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7EFF91DA819500095F296 /* MLVipViewController.xib */; };
 		35F7F0041DA82BDE0095F296 /* MLSearchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F7F0021DA82BDE0095F296 /* MLSearchListCell.m */; };
 		35F7F0051DA82BDE0095F296 /* MLSearchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F7F0031DA82BDE0095F296 /* MLSearchListCell.xib */; };
+		35F7F0061DAD6F840095F296 /* MLSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337D31DA34F9600C3EBDB /* MLSearchListViewController.m */; };
 		FAEC94BFBD34E70A045ED1A8 /* libPods-SearchMeLi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F084714651F0D305DB66E92 /* libPods-SearchMeLi.a */; };
 		FC8337A11DA34ED400C3EBDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A01DA34ED400C3EBDB /* main.m */; };
 		FC8337A41DA34ED400C3EBDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8337A31DA34ED400C3EBDB /* AppDelegate.m */; };
@@ -380,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8337C51DA34ED400C3EBDB /* SearchMeLiUITests.m in Sources */,
+				35F7F0061DAD6F840095F296 /* MLSearchListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

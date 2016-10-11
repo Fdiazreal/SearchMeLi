@@ -10,7 +10,7 @@
 #import "MLSearchListCell.h"
 #import "MLVipViewController.h"
 
-static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifier";
+static NSString* const kMLSearchViewControllerTableIdentifier = @"ATableIdentifier";
 
 @interface MLSearchListViewController ()
 
@@ -34,7 +34,7 @@ static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifie
     [super viewDidLoad];
     
     UINib *pMLSearchListCellNib = [UINib nibWithNibName:NSStringFromClass([MLSearchListCell class]) bundle:nil];
-    [self.tableView registerNib:pMLSearchListCellNib forCellReuseIdentifier:MLSearchViewControllerTableIdentifier];
+    [self.tableView registerNib: pMLSearchListCellNib forCellReuseIdentifier: kMLSearchViewControllerTableIdentifier];
     
     self.tableData = @[@"Row 1", @"Row 2", @"Row 3", @"Row 4", @"Row 5", @"Row 6", @"Row 7", @"Row 8", @"Row 9", @"Row 10", @"Row 11", @"Row 12", @"Row 13", @"Row 14", @"Row 15", @"Row 16", @"Row 17", @"Row 18", @"Row 19", @"Row 20", @"Row 21", @"Row 22"];
     
@@ -49,15 +49,15 @@ static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifie
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Try to reuse a cell
-    MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
+    MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier: kMLSearchViewControllerTableIdentifier];
     
     // Modify the cell
     cell.priceLabel.text = [[self.priceData objectAtIndex:indexPath.row] stringValue];
     cell.titleLabel.text = [self.tableData objectAtIndex:indexPath.row];
     
-    UIImageView *imageView = cell.imageView;
+    UIImageView *imageView = cell.cellImage;
     
-    NSString *imageUrl = [NSString stringWithFormat: @"%@%d", @"https://dummyimage.com/200x200/eeeeee/ff0000.png&text=Image+", indexPath.row + 1];
+    NSString *imageUrl = [NSString stringWithFormat: @"%@%d", @"https://dummyimage.com/300x300/eeeeee/ff0000.png&text=Image+", indexPath.row + 1];
     
     [imageView setImageWithURL: [NSURL URLWithString: imageUrl]];
     
@@ -66,7 +66,7 @@ static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifie
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier:MLSearchViewControllerTableIdentifier];
+    MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier: kMLSearchViewControllerTableIdentifier];
 
     // TODO: should cache this, it is an expensive operation
     return [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
@@ -75,7 +75,15 @@ static NSString* const MLSearchViewControllerTableIdentifier = @"ATableIdentifie
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedRow = indexPath;
     
-    [self.navigationController pushViewController: [[MLVipViewController alloc] init] animated:YES];
+    MLSearchListCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    UIImage *image = selectedCell.cellImage.image;
+    NSString *title = selectedCell.titleLabel.text;
+    NSString *price = selectedCell.priceLabel.text;
+    
+    UIViewController *vipViewController = [[MLVipViewController alloc] initWithImage:image withTitle:title andWithPrice:price];
+    
+    [self.navigationController pushViewController:vipViewController  animated:YES];
 }
 
 @end
