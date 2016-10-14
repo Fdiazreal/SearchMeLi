@@ -39,7 +39,7 @@
     [super viewDidLoad];
     NSLog(@"Loaded VIP");
     self.mainImageView.image = self.mainImage;
-    self.priceUILabel.text = [NSString stringWithFormat:@"$ %@", self.priceString ];
+    self.priceUILabel.text = self.priceString;
     self.titleUILabel.text = self.titleString;
     // Do any additional setup after loading the view from its nib.
 }

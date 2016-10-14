@@ -43,7 +43,7 @@
                         <constraint firstAttribute="height" constant="44" id="qW4-hd-gPW"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="Button">
+                    <state key="normal" title="Comprar">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>

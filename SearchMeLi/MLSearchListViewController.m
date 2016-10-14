@@ -9,15 +9,16 @@
 #import "MLSearchListViewController.h"
 #import "MLSearchListCell.h"
 #import "MLVipViewController.h"
+#import "MLSearchService.h"
+#import "MLSearchItem.h"
 
 static NSString* const kMLSearchViewControllerTableIdentifier = @"ATableIdentifier";
 
 @interface MLSearchListViewController ()
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *tableData;
-@property (nonatomic, strong) NSArray *priceData;
 @property (nonatomic, strong) NSIndexPath *selectedRow;
+@property (nonatomic, strong) MLSearchResponse *searchResponse;
 
 @end
 
@@ -27,6 +28,18 @@ static NSString* const kMLSearchViewControllerTableIdentifier = @"ATableIdentifi
     [super viewWillAppear:animated];
     
     [self.tableView deselectRowAtIndexPath: self.selectedRow animated: YES];
+    
+    MLSearchService *searchService = [[MLSearchService alloc] init];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    if(!self.searchResponse){
+        
+        [searchService search:@"ipod" onSite:@"MLA" success:^(MLSearchResponse *searchResponse){
+            weakSelf.searchResponse = searchResponse;
+            [self.tableView reloadData];
+        } fail:nil];
+    }
 }
 
 - (void)viewDidLoad {
@@ -35,16 +48,12 @@ static NSString* const kMLSearchViewControllerTableIdentifier = @"ATableIdentifi
     
     UINib *pMLSearchListCellNib = [UINib nibWithNibName:NSStringFromClass([MLSearchListCell class]) bundle:nil];
     [self.tableView registerNib: pMLSearchListCellNib forCellReuseIdentifier: kMLSearchViewControllerTableIdentifier];
-    
-    self.tableData = @[@"Row 1", @"Row 2", @"Row 3", @"Row 4", @"Row 5", @"Row 6", @"Row 7", @"Row 8", @"Row 9", @"Row 10", @"Row 11", @"Row 12", @"Row 13", @"Row 14", @"Row 15", @"Row 16", @"Row 17", @"Row 18", @"Row 19", @"Row 20", @"Row 21", @"Row 22"];
-    
-    self.priceData = @[@100, @200, @300, @400, @500, @600, @700, @800, @900, @1000, @1100, @1200, @1300, @1400, @1500, @1600, @1700, @1800, @1900, @2000, @2100, @2200];
 }
 
 #pragma mark - UITableViewDatasource protocol
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.tableData count];
+    return [self.searchResponse.results count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,14 +61,16 @@ static NSString* const kMLSearchViewControllerTableIdentifier = @"ATableIdentifi
     MLSearchListCell *cell = [tableView dequeueReusableCellWithIdentifier: kMLSearchViewControllerTableIdentifier];
     
     // Modify the cell
-    cell.priceLabel.text = [[self.priceData objectAtIndex:indexPath.row] stringValue];
-    cell.titleLabel.text = [self.tableData objectAtIndex:indexPath.row];
+    MLSearchItem *item = self.searchResponse.results[indexPath.row];
+    
+    cell.priceLabel.text = [NSString stringWithFormat:@"$ %@", item.itemPrice];
+    cell.titleLabel.text = item.itemTitle;
     
     UIImageView *imageView = cell.cellImage;
     
-    NSString *imageUrl = [NSString stringWithFormat: @"%@%d", @"https://dummyimage.com/300x300/eeeeee/ff0000.png&text=Image+", indexPath.row + 1];
+    //NSString *imageUrl = [NSString stringWithFormat: @"%@%d", @"https://dummyimage.com/300x300/eeeeee/ff0000.png&text=Image+", indexPath.row + 1];
     
-    [imageView setImageWithURL: [NSURL URLWithString: imageUrl]];
+    [imageView setImageWithURL: [NSURL URLWithString: item.itemThumbnail]];
     
     return cell;
 }
