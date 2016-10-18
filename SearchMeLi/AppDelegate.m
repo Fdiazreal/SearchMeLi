@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "MLSearchListViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +21,7 @@
     // Create a window with the frame that has the same size as the screen
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    MLSearchListViewController *rootViewController = [[MLSearchListViewController alloc] init]; // Better way to instantiate
+    MLSearchViewController *rootViewController = [[MLSearchViewController alloc] init]; // Better way to instantiate
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     

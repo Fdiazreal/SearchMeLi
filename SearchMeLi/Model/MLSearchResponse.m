@@ -6,10 +6,10 @@
 //  Copyright © 2016 Federico Diaz Real. All rights reserved.
 //
 
-#import "MLSearch.h"
+#import "MLSearchResponse.h"
 #import "MLSearchItem.h"
 
-@implementation MLSearch
+@implementation MLSearchResponse
 
 - (id) initWithDictionary:(NSDictionary*)search {
     self = [super init];

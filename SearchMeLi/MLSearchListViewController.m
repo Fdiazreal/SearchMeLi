@@ -19,10 +19,23 @@ static NSString* const kMLSearchViewControllerTableIdentifier = @"ATableIdentifi
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSIndexPath *selectedRow;
 @property (nonatomic, strong) MLSearchResponse *searchResponse;
+@property (nonatomic, strong) NSString *query;
+@property (nonatomic, strong) NSString *siteId;
 
 @end
 
 @implementation MLSearchListViewController
+
+- (id)initWithQuery:(NSString *)query andSite:(NSString *)siteId {
+    self = [super init];
+    
+    if(self){
+        self.query = query;
+        self.siteId = siteId;
+    }
+    
+    return self;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -35,9 +48,10 @@ static NSString* const kMLSearchViewControllerTableIdentifier = @"ATableIdentifi
     
     if(!self.searchResponse){
         
-        [searchService search:@"ipod" onSite:@"MLA" success:^(MLSearchResponse *searchResponse){
+        [searchService search:self.query onSite:self.siteId success:^(MLSearchResponse *searchResponse){
             weakSelf.searchResponse = searchResponse;
             [self.tableView reloadData];
+            
         } fail:nil];
     }
 }
@@ -67,8 +81,6 @@ static NSString* const kMLSearchViewControllerTableIdentifier = @"ATableIdentifi
     cell.titleLabel.text = item.itemTitle;
     
     UIImageView *imageView = cell.cellImage;
-    
-    //NSString *imageUrl = [NSString stringWithFormat: @"%@%d", @"https://dummyimage.com/300x300/eeeeee/ff0000.png&text=Image+", indexPath.row + 1];
     
     [imageView setImageWithURL: [NSURL URLWithString: item.itemThumbnail]];
     

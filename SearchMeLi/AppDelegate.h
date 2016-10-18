@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLSearchViewController.h"
 
 @class MLSearchListViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) MLSearchListViewController *viewController;
+@property (strong, nonatomic) MLSearchViewController *viewController;
 
 @end
 

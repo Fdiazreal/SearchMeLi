@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MLSearchItemModel : NSObject
+@interface MLSearchItem : NSObject
 
 @property (nonatomic, strong) NSString *itemTitle;
 @property (nonatomic, strong) NSNumber *itemPrice;

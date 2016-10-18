@@ -10,6 +10,6 @@
 
 @interface MLVipViewController : UIViewController
 
-- (id)initWithImage:(UIImage *)image withTitle:(NSString *)title andWithPrice:(NSString *)price;
+- (id)initWithImage:(UIImage *)image withTitle:(NSString *)itemTitle andWithPrice:(NSString *)itemPrice;
 
 @end

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MLSearchViewController">
+            <connections>
+                <outlet property="queryField" destination="nCk-7H-cu8" id="YPV-ie-3ak"/>
+                <outlet property="siteInput" destination="Z6H-g1-aZv" id="QsA-lO-B9q"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Query" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCk-7H-cu8">
+                    <rect key="frame" x="8" y="319" width="268" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi7-dc-Lu3">
+                    <rect key="frame" x="8" y="381" width="359" height="44"/>
+                    <color key="backgroundColor" red="0.20392156862745098" green="0.51372549019607838" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="CdI-SA-BFI"/>
+                    </constraints>
+                    <state key="normal" title="Search">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="search:" destination="-1" eventType="touchUpInside" id="L8F-tP-Yl9"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Site" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6H-g1-aZv">
+                    <rect key="frame" x="292" y="319" width="75" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="cKE-wG-TzC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wi7-dc-Lu3" secondAttribute="trailing" constant="8" id="DZx-zI-n2l"/>
+                <constraint firstItem="Z6H-g1-aZv" firstAttribute="leading" secondItem="nCk-7H-cu8" secondAttribute="trailing" constant="16" id="Icp-Eo-H1w"/>
+                <constraint firstAttribute="trailing" secondItem="Z6H-g1-aZv" secondAttribute="trailing" constant="8" id="QeO-Ff-eU8"/>
+                <constraint firstItem="wi7-dc-Lu3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Vjn-6s-kR5"/>
+                <constraint firstItem="wi7-dc-Lu3" firstAttribute="top" secondItem="nCk-7H-cu8" secondAttribute="bottom" constant="32" id="a7I-Vx-2yc"/>
+                <constraint firstItem="Z6H-g1-aZv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oa3-dm-C7R"/>
+                <constraint firstItem="nCk-7H-cu8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="u5Y-ko-gJX"/>
+                <constraint firstItem="nCk-7H-cu8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="yPG-eI-kjG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="599.5" y="352.5"/>
+        </view>
+    </objects>
+</document>

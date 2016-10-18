@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MLSearch : NSObject
+@interface MLSearchResponse : NSObject
 
 @property (nonatomic, strong) NSArray* results;
 

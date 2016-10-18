@@ -15,21 +15,21 @@
 @property (nonatomic, weak) IBOutlet UILabel *titleUILabel;
 
 @property (nonatomic, weak) IBOutlet UIImage *mainImage;
-@property (nonatomic, weak) IBOutlet NSString *priceString;
-@property (nonatomic, weak) IBOutlet NSString *titleString;
+@property (nonatomic, weak) IBOutlet NSString *itemPrice;
+@property (nonatomic, weak) IBOutlet NSString *itemtTitle;
 
 @end
 
 @implementation MLVipViewController
 
-- (id)initWithImage:(UIImage *)mainImage withTitle:(NSString *)title andWithPrice:(NSString *)price {
+- (id)initWithImage:(UIImage *)mainImage withTitle:(NSString *)itemTitle andWithPrice:(NSString *)itemPrice {
     
     self = [super init];
     
     if(self){
         self.mainImage = mainImage;
-        self.priceString = price;
-        self.titleString = title;
+        self.itemPrice = itemPrice;
+        self.itemtTitle = itemTitle;
     }
     
     return self;
@@ -37,11 +37,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Loaded VIP");
+    
     self.mainImageView.image = self.mainImage;
-    self.priceUILabel.text = self.priceString;
-    self.titleUILabel.text = self.titleString;
-    // Do any additional setup after loading the view from its nib.
+    self.priceUILabel.text = self.itemPrice;
+    self.titleUILabel.text = self.itemtTitle;
+    
+    // One of these lines should fix the problem with the image staying under the navbar
+    //self.navigationController.navigationBar.translucent = NO;
+    //self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,7 +8,7 @@
 
 #import "MLSearchItem.h"
 
-@implementation MLSearchItemModel
+@implementation MLSearchItem
 
 - (id) initWithDictionary:(NSDictionary*)searchItem {
     self = [super init];
@@ -16,7 +16,10 @@
     if(self) {
         self.itemTitle = searchItem[@"title"];
         self.itemPrice = searchItem[@"price"];
-        self.itemThumbnail = searchItem[@"thumbnail"];
+        
+        NSString *secureThumbnailURL = [searchItem[@"thumbnail"] stringByReplacingOccurrencesOfString:@"http://" withString:@"https://"];
+        // Use a bigger picture
+        self.itemThumbnail = [secureThumbnailURL stringByReplacingOccurrencesOfString:@"-I.jpg" withString:@"-C.png"];
     }
     
     return self;

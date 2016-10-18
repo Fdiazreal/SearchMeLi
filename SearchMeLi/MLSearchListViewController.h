@@ -10,4 +10,6 @@
 
 @interface MLSearchListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+- (id)initWithQuery:(NSString *)query andSite:(NSString *)siteId;
+
 @end
