@@ -31,6 +31,7 @@ static NSString* const kMLSearchViewControllerTableIdentifier = @"ATableIdentifi
     
     if(self){
         self.query = query;
+        self.title = query;
         self.siteId = siteId;
     }
     

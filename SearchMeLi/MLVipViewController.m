@@ -30,6 +30,7 @@
         self.mainImage = mainImage;
         self.itemPrice = itemPrice;
         self.itemtTitle = itemTitle;
+        self.title = @"Item";
     }
     
     return self;

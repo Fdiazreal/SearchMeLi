@@ -23,8 +23,28 @@ static NSArray* kSites;
 
 @implementation MLSearchViewController
 
+-(instancetype)init{
+    self = [super init];
+    
+    if(self){
+        self.title = @"Search";
+    }
+    
+    return self;
+}
+
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    
     self.siteIds = @[@"MLA", @"MLB", @"MLM", @"MLC", @"MLV", @"MCO", @"MPE"];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)viewDidLoad {
